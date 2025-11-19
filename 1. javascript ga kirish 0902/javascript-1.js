@@ -46,4 +46,22 @@ Xulosa:
 • Frontend’da brauzer konsolida, backend’da esa Node.js terminalida natija ko‘rsatadi.
 
 
+
+Extension: 
+JavaScript (ES6) code snippets – editor da kodlarni avtomatik tamomlash uchun taklif beruvchi vosita(huddi Emmet abbreviation ga o’xshash)
+__________________________________________________________________________
+Javascript ni html sahifada foydalanish
+Asosan 3 usulda foydalanamiz.
+
+1)	body elementining yopilish tegidan oldin <script> elementini yozib, uning ichida javascript kodlarini yozish orqali.
+2)	Inline
+3)	External 
+              1)body elementining yopilish tagi oldidan
+
+              2)//!head elementida defer attributi orqali(!asosiy shuni ishlatamiz, bunda DOM to'liq yuklangandan keyin js kodlar ishlashni boshlaydi)
+              sintaksis:
+              <script defer src="javascript-1.js"></script>
+
+              3)head elementida async attributi orqali(DOM manipulyatsiyasiga tegishli kod bo'lmasa, asosan reklamalar uchun ishlatiladi)
+
 */
