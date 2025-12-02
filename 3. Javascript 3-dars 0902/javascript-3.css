@@ -1,0 +1,86 @@
+#kataklar {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  background-image: linear-gradient(to right, #d5dbf7, #dcdcdc);
+}
+
+#btn {
+  padding: 10px 30px;
+  background-color: rgb(24, 95, 210);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#rasm {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: scale(0.05);
+  transition: max-height 5s ease, opacity 0.5s ease, transform 5s ease;
+}
+
+#rasm.active {
+  max-height: 500px;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.qidiruv {
+  padding: 10px;
+  width: 500px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.ota {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+}
+
+.bola {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  background-image: linear-gradient(to right, #f7d5e1, #dcdcdc);
+}
+
+.salom {
+  background-color: yellow;
+}
+
+#results {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* har bir katak 200px dan kichik bo‘lmaydi */
+  grid-gap: 10px;
+}
+
+.bola {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 10px;
+  background-image: linear-gradient(to right, #f7d5e1, #dcdcdc);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bola img {
+  width: 100%;
+  border-radius: 5px;
+}
