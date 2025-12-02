@@ -41,6 +41,7 @@
 //!MISOLLAR
 
 console.log("5" + 3); // 53
+console.log("5" + (10 + 3)); // 513
 console.log(5 + true); // 6
 console.log(5 + false); // 5
 console.log("5" - 3); // 2
