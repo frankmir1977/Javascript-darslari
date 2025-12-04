@@ -61,6 +61,7 @@ console.log(undefined + 5); // NaN
 console.log(null + 5); // 5
 console.log(null * 5); // 0
 console.log(5 / null); // Infinity
+console.log(undefined + null);
 
 let i = 5;
 console.log(i++ + ++i); // 12
