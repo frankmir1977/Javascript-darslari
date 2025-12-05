@@ -207,10 +207,216 @@
 // console.log(5 === "4");
 // console.log(5 !== "4");
 
+//? =======BOOLEAN CONTEXT=======//
+
+// console.log(5);
+// console.log(5 > 4);
+
+// console.log(!5)
+
+// console.log(5);
+// console.log(5 > 4);
+// console.log(!5);
+// console.log(!!5);
+
+// console.log(!!0n);
+
+//? Boolean context har safar dastur biror ifodani true yoki false sifatida baholashi kerak bo'lganda paydo bo'ladi.
+
+//* Shartli tuzilmalar (Conditional statements)if, else if, while, for kabi tuzilmalar ichidagi shartlar avtomatik ravishda Boolean kontekstda baholanadi.
+
+//? Mantiqiy operatorlar (Logical operators)(!, &&, ||). Bu operatorlar operandlarni Boolean kontekstda baholaydi.
+
+//? Ternary operator (?:). Shart qismi Boolean kontekstda tekshiriladi.
+
+//* Sikl(Loop) shartlari while (expr) yoki do { ... } while (expr) ichidagi expr Boolean kontekstda avtomatik ravishda baholanadi.
+
+//? Boolean tipiga majburan o‘tkazish (Boolean() yoki !! yoki !). Qiymatni to‘g‘ridan-to‘g‘ri Boolean kontekstga o‘tkazadi.
+
+//? 1. Falsy qiymatlar
+//? 2. Truthy qiymatlar
+
+//? Agar taqqoslash operatorlari bo'lmasa, biror qiymatning o'zining true yoki false qiymatlarini tekshirmoqchi bo'lsak !! belgini shu qiymatning oldiga qo'yish orqali yoki Boolean() funksiyasi orqali Boolean kontekstga o'tkazish mumkin. Bular qiymatni majburan boolean turga(true yoki false ga) aylantiradi.
+
+// ! — bu logical NOT operatori. U har doim Boolean qiymat qaytaradi (true yoki false).
+
+//? Demak ! qiymatning boolean context ga inkor qilib o'tkazsa, !! belgi ifodaning inkor inkor varianti bilan asl qiymatni beradi.
+
+//? Falsy qiymatlar(Bular boolean kontekstda false qiymat qaytaradi):
+
+// false
+// 0
+// -0
+// 0n
+// -0n
+// ""
+// null
+// undefined
+// NaN
+
+// console.log(false);
+// console.log(0);
+// console.log(-0);
+// console.log(0n);
+// console.log(-0n);
+// console.log("");
+// console.log(null);
+// console.log(undefined);
+// console.log(NaN);
+
+// console.log(!!false);
+// console.log(!!0);
+// console.log(!!-0);
+// console.log(!!0n);
+// console.log(!!-0n);
+// console.log(!!!"!");
+// console.log(!!null);
+// console.log(!!undefined);
+// console.log(!!NaN);
+
+// console.log(!!false);
+
+// console.log(!!null);
+// console.log(null > -5);
+
+// console.log(!!0);
+// console.log(!!false);
+// console.log(!!"false");
+// console.log(0n);
+// console.log(!0n);
+// console.log(!!NaN);
+
+// console.log(!!100);
+
+// console.log(!!"");
+// console.log(!!" ");
+// console.log(!!"  ");
+// console.log(!!!!!null);
+// console.log(10 > 25);
+
+// console.log(!"");
+// console.log(!!"");
+// console.log(!0);
+// console.log(!!0);
+// console.log(!!0);
+// console.log(!false);
+// console.log(!!false);
+// console.log(!null);
+// console.log(!!null);
+// console.log(!undefined);
+// console.log(!!undefined);
+// console.log(!NaN);
+// console.log(!!NaN);
+// console.log(!0n);
+// console.log(!!0n);
+// console.log(!-0n);
+// console.log(!!-0n);
+
+// console.log(!!false);
+// console.log(!!0);
+// console.log(!!-0);
+// console.log(!!"");
+// console.log(!!null);
+// console.log(!!undefined);
+// console.log(!!NaN);
+// console.log(!!0n);
+// console.log(!!-0n);
+
+// console.log(Boolean(false));
+// console.log(Boolean(0));
+// console.log(Boolean(-0));
+// console.log(Boolean(""));
+// console.log(Boolean(null));
+// console.log(Boolean(undefined));
+// console.log(Boolean(NaN));
+// console.log(Boolean(0n));
+// console.log(Boolean(-0n));
+
+//? Truthy qiymatlar(Bular Boolean kontekstda true qiymatni qaytaradi):
+
+// Har qanday 0,-0, 0n, -0n bo'lmagan har qanday sonlar, malasalan: -12.3, 2025, ...
+// " ", "  ", "   ", ...
+// "Anvar" (Har qanday bo'sh bo'lmagan string)
+// "0" (String ichida 0)
+// "false" (String ichida false)
+// 'false'
+// true
+// 1
+// {}  // bo'sh obyekt
+
+// function(){}
+// {
+//     ism: "Umid",
+//     yoshi: 15,               // bo'sh bo'lmagan obyekt
+//     manzili: "Xorazm"
+// }
+
+// []  bo'sh array
+// [0]  bo'sh bo'lmagan array
+// [1, 1015, "Anvar"]  bo'sh bo'lmagan array
+
+// console.log(!!"0");
+// console.log(!!0);
+// console.log(0);
+
+// console.log(!!-125);
+// console.log(!"Abror");
+// console.log(!!"Abror");
+
+// console.log(!!" "); // true
+// console.log(!!""); // false
+// console.log(!""); //true
+// console.log(!" "); //false
+
+// console.log(!!"0");
+// console.log(!"0");
+// console.log(!!"false");
+// console.log(!!false);
+// console.log(!false);
+// console.log(!!true);
+// console.log(!!1);
+// console.log(!!{});
+// console.log(!![]);
+// console.log(!!function () {});
+
+// function qidir(){
+// qidiruv bo'yicha algoritmlar
+// }
+
+// console.log(Boolean(-125));
+// console.log(Boolean("Anvar"));
+// console.log(Boolean(" "));
+// console.log(Boolean("0"));
+// console.log(Boolean("false"));
+// console.log(Boolean(true));
+// console.log(Boolean(1));
+// console.log(Boolean({}));
+// console.log(Boolean([]));
+// console.log(Boolean(function () {}));
+
+//! Misollani ishlangla!!!
+
+// console.log(!5 > 3); //!
+// console.log(!!5 > 3); //!
+// console.log(!5 < 3); //!
+// console.log(!!5 < 3); //!
+// console.log(!5 == 3); //!
+// console.log(!!5 == 3); //!
+// console.log(!5 === 3); //!
+// console.log(!!5 === 3); //!
+// console.log(!5 >= 3); //!
+// console.log(!!5 >= 3); //!
+// console.log(!5 <= 3); //!
+// console.log(!!5 <= 3); //!
+// console.log(!5 != 3); //!
+// console.log(!!5 != 3); //!
+// console.log(!5 !== 3); //!
+// console.log(!!5 !== 3); //!
+
 //? =MANTIQIY OPERATORLAR(LOGICAL OPERATORS)=//
 
-//? 1. && and operatori (VA operatori)
-//? 2. || or operatori (YOKI operatori)
+//? 1. && and operatori (VA operatori)(mantiqiy ko'paytirish)
+//? 2. || or operatori (YOKI operatori)(mantiqiy qo'shish)
 //? 3. ! not operatori (EMAS operatori)
 
 // let ismi = "Anvar";
@@ -221,9 +427,9 @@
 // console.log(parol == "12345");
 // console.log(yoshi >= 15);
 
-let ism = "Anvar";
-let parol = "12345";
-let yosh = 15;
+// let ism = "Anvar";
+// let parol = "12345";
+// let yosh = 15;
 
 // console.log(ism == "Anvar")
 // console.log(ism == "anvar");
@@ -233,3 +439,27 @@ let yosh = 15;
 // console.log(parol === 12345);
 // console.log(parol == "123456");
 // console.log(yosh == 15);
+
+// console.log(!!null && !!undefined);
+// console.log(!!null || !!undefined);
+// console.log(!null && !undefined);
+// console.log(!null || !undefined);
+// console.log(!null);
+// console.log(!undefined);
+// console.log(!!null);
+// console.log(!!undefined);
+
+// console.log(!!null && !!undefined);
+// console.log(!!null || !!undefined);
+// console.log(!null && !undefined);
+// console.log(!null || !undefined);
+// console.log(!null);
+// console.log(!undefined);
+// console.log(!!null);
+// console.log(!!undefined);
+
+// console.log(ism == "Anvar");
+// console.log(ism == "anvar");
+// console.log(ism == "anvar" || yosh == 15);
+// console.log(ism == "anvar" && yosh == 15);
+// console.log(ism == "anvar" && yosh == 16);
